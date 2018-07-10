@@ -112,7 +112,7 @@
 			this.fld.appendChild( this.toggle );
 			this.fld.appendChild( this.optionsList );
 			this.elOriginal.parentNode.insertBefore( this.fld, this.elOriginal );
-			//this.elOriginal.style.display = 'none';
+			this.elOriginal.style.display = 'none';
 		},
 		_createInput : function() {
 			var self = this;
@@ -141,7 +141,7 @@
 			this.fld.appendChild( this.toggle );
 			this.fld.appendChild( this.optionsList );
 			this.elOriginal.parentNode.insertBefore( this.fld, this.elOriginal );
-			//this.elOriginal.style.display = 'none';
+			this.elOriginal.style.display = 'none';
 		},
 		_initEvents : function() {
 			var self = this;
@@ -246,7 +246,7 @@
         <sys_created_on>2018-07-09 07:53:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>c00ac7b34f4b1b009881c5c18110c777</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>x_snc_sc_arnoud.nlform.js</sys_name>
         <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
         <sys_policy/>
@@ -254,7 +254,7 @@
         <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
         <sys_update_name>sys_ui_script_c00ac7b34f4b1b009881c5c18110c777</sys_update_name>
         <sys_updated_by>Arnoud.Kooi</sys_updated_by>
-        <sys_updated_on>2018-07-10 11:37:47</sys_updated_on>
+        <sys_updated_on>2018-07-10 21:28:11</sys_updated_on>
         <use_scoped_format>false</use_scoped_format>
     </sys_ui_script>
 </record_update>
