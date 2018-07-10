@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="document_viewer_audit=all,all_tables.text_index_translations=true,global_search_config_handler=KnowledgeArticle,attachment_index=true,text_index_attachment_displayed=true,text_index_enable_idf=true,synch_attachments=true,use_document_viewer=true,text_index_filter_junk=false" audit="true" label="Knowledge" max_length="40" name="kb_knowledge" text_index="true" type="collection">
+        <element choice="1" label="Industry" max_length="40" name="x_snc_sc_arnoud_industry" type="choice">
+            <choice>
+                <element label="Education" value="education"/>
+                <element label="Federal" value="federal"/>
+                <element label="Finance" value="finance"/>
+                <element label="Media" value="media"/>
+                <element label="Retail" value="retail"/>
+                <element label="Services" value="services"/>
+                <element label="Technology" value="technology"/>
+            </choice>
+        </element>
+        <element choice="1" label="Product" max_length="40" name="x_snc_sc_arnoud_product" type="choice">
+            <choice>
+                <element label="Asset Management" value="asset_management"/>
+                <element label="Facilities Service Management" value="facilities_service_management"/>
+                <element label="HR Service Automation" value="hr_service_automation"/>
+                <element label="IT Cost Management" value="it_cost_management"/>
+                <element label="IT Governance, Risk, and Compliance" value="it_governance_risk_and_compliance"/>
+                <element label="ITBM" value="itbm"/>
+                <element label="ITOM" value="itom"/>
+                <element label="ITSM" value="itsm"/>
+                <element label="Knowledge Management" value="knowledge_management"/>
+                <element label="SIAM" value="siam"/>
+                <element label="Work Management" value="work_management"/>
+            </choice>
+        </element>
+    </element>
+</database>

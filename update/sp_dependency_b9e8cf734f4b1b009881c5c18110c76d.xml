@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_dependency">
+    <sp_dependency action="INSERT_OR_UPDATE">
+        <module/>
+        <name>nlform.js</name>
+        <page_load>false</page_load>
+        <sp_portals/>
+        <sys_class_name>sp_dependency</sys_class_name>
+        <sys_created_by>Arnoud.Kooi</sys_created_by>
+        <sys_created_on>2018-07-09 07:49:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b9e8cf734f4b1b009881c5c18110c76d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nlform.js</sys_name>
+        <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+        <sys_update_name>sp_dependency_b9e8cf734f4b1b009881c5c18110c76d</sys_update_name>
+        <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+        <sys_updated_on>2018-07-09 07:49:54</sys_updated_on>
+    </sp_dependency>
+</record_update>

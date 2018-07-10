@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_snc_sc_arnoud_industry" table="kb_knowledge" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Education</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e80dd6f74fc71b009881c5c18110c7e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>education</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Federal</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ec0dd6f74fc71b009881c5c18110c7ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>federal</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Finance</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a40dd6f74fc71b009881c5c18110c7fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>finance</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Media</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>280d1af74fc71b009881c5c18110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>media</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Retail</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c0d1af74fc71b009881c5c18110c705</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>retail</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Services</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b00d1af74fc71b009881c5c18110c70a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>services</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_snc_sc_arnoud_industry</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Technology</label>
+            <language>en</language>
+            <name>kb_knowledge</name>
+            <sequence/>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b80d1af74fc71b009881c5c18110c70e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+            <value>technology</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_snc_sc_arnoud_industry</element>
+            <name>kb_knowledge</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:36:34</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>e00dd6f74fc71b009881c5c18110c7eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_sc_arnoud_industry</sys_name>
+            <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+            <sys_update_name>sys_choice_kb_knowledge_x_snc_sc_arnoud_industry</sys_update_name>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:36:34</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

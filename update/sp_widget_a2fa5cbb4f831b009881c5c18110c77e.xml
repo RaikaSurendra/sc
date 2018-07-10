@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+	/* widget controller */
+	var c = this;
+
+	setTimeout(function () { //ugly, I know...
+		nlform = new NLForm(document.getElementById('nl-form'));
+	}, 900);
+
+
+	c.getSolutions = function () {
+		c.action = "getSolutions";
+		c.server.update();
+	}
+
+	c.selectChange = function (exclude) {
+		c.data.exclude = exclude;
+		c.server.update().then(function () {
+			nlform.reset();
+			setTimeout(function () { //again ugly but it needs some time
+				nlform = new NLForm(document.getElementById('nl-form'));
+			}, 900);
+		})
+	}
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+ 
+}
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin:12px 4px;
+  font-size: 20px;
+  height:250px;
+
+}
+
+.solution-header{
+font-size:10pt;
+}
+
+.solution-body{
+font-size:12pt;
+  color:#000000;
+}
+
+/* general style for the form */
+.nl-form {
+	width: 100%;
+	margin: 0.3em auto 0 auto;
+	font-size: 2em;
+	line-height: 1.5;
+}
+
+.navbar-inverse {
+
+    border-bottom: 4px solid #8BB3A2 !important;
+}
+
+div.intro{
+	height:100px;
+  background-color:#F6E0E2;
+  font-size:2em;
+  font-weight:100;
+  padding:20px;
+  color:#2D3D40;
+}
+
+
+.nl-form ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* normalize the input elements, make them look like everything else */
+.nl-form input,
+.nl-form select,
+.nl-form button {
+	border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.nl-form input:focus {
+	outline: none;
+}
+
+.main{
+	
+  
+}
+
+/* custom field (drop-down, text element) styling  */
+.nl-field {
+	display: inline-block;
+	position: relative;
+}
+
+.nl-field.nl-field-open {
+	z-index: 100000;
+}
+
+/* the toggle is the visible part in the form */
+.nl-field-toggle,
+.nl-form input,
+.nl-form select  {
+	line-height: inherit;
+	display: inline-block;
+	color: #b14943;
+	cursor: pointer;
+	border-bottom: 1px solid #b14943;
+}
+
+/* drop-down list / text element */
+.nl-field ul {
+	position: absolute;
+	visibility: hidden;
+	background: #76C3BD;
+  z-index:100000 !important;
+	left: -0.5em;
+	top: 70%;
+	font-size: 60%;
+	opacity: 0;
+	-webkit-transform: translateY(-30%) scale(0.9);
+	-moz-transform: translateY(-30%) scale(0.9);
+	transform: translateY(-30%) scale(0.9);
+	-webkit-transition: visibility 0s 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: visibility 0s 0.3s, opacity 0.3s, -moz-transform 0.3s;
+	transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.nl-field.nl-field-open ul {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: translateY(-30%) scale(1);
+	-moz-transform: translateY(-30%) scale(1);
+	transform: translateY(-30%) scale(1);
+	-webkit-transition: visibility 0s 0s, opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: visibility 0s 0s, opacity 0.3s, -moz-transform 0.3s;
+	transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
+}
+
+.nl-field ul li {
+	color: #fff;
+	position: relative;
+}
+
+.nl-dd ul li {
+	padding: 0 1.5em 0 0.5em;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.nl-dd ul li.nl-dd-checked {
+	color: #478982;
+}
+
+.no-touch .nl-dd ul li:hover {
+	background: rgba(0,0,0,0.05);
+}
+
+.no-touch .nl-dd ul li:hover:active {
+	color: #478982;
+}
+
+/* icons for some elements */
+.nl-dd ul li.nl-dd-checked:before,
+.nl-submit:before,
+.nl-field-go:before {
+	font-family: "Glyphicons Halflings";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.nl-dd ul li.nl-dd-checked:before {
+
+  content: "\e013";
+	position: absolute;
+	right: 1em;
+	font-size: 50%;
+	line-height: 3;
+}
+
+.nl-ti-text ul {
+	min-width: 8em;
+}
+
+.nl-ti-text ul li.nl-ti-input input {
+	width: 100%;
+	padding: 0.2em 2em 0.2em 0.5em;
+	border-bottom: none;
+	color: #fff;
+}
+
+.nl-form .nl-field-go {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	cursor: pointer;
+	background: rgba(0,0,0,0.1);
+	width: 1.8em;
+	text-align: center;
+	color: transparent;
+}
+
+.nl-field-go:before {
+	content: "\e003";
+	font-size: 75%;
+	color: #fff;
+	width: 100%;
+	line-height: 2.5;
+	display: block;
+}
+
+/* custom placeholder color */
+input::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.8);
+}
+
+
+input:active::-webkit-input-placeholder ,
+input:focus::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.2);
+}
+
+input::-moz-placeholder {
+	color: rgba(255,255,255,0.8);
+}
+
+input:active::-moz-placeholder,
+input:focus::-moz-placeholder {
+	color: rgba(255,255,255,0.2);
+}
+
+input:-ms-input-placeholder {  
+	color: rgba(255,255,255,0.8);
+}
+
+input:active::-ms-input-placeholder ,
+input:focus::-ms-input-placeholder {
+	color: rgba(255,255,255,0.2);
+}
+
+/* example field below text input */
+.nl-ti-text ul li.nl-ti-example {
+	font-size: 40%;
+	font-style: italic;
+	font-weight: 400;
+	padding: 0.4em 1em;
+	color: rgba(0,0,0,0.2);
+	border-top: 1px dashed rgba(255,255,255,0.7);
+}
+
+.nl-ti-text ul li.nl-ti-example em {
+	color: #fff
+}
+
+/* submit button */
+.nl-submit-wrap {
+	margin-top: 0.4em;
+}
+
+.nl-form .nl-submit {
+	line-height: 3;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	background: #76C3BD;
+	color: #fff;
+	padding: 0 1em 0 0;
+	font-size: 40%;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.nl-submit:before {
+	content: "\e003";
+	color: #fff;
+	float: left;
+	padding: 0 0.7em;
+	margin: 0 0.8em 0 0;
+	background: #69B1A9;
+}
+
+.no-touch .nl-form .nl-submit:hover,
+.no-touch .nl-form .nl-submit:active {
+	background: #69B1A9;
+}
+
+.no-touch .nl-form .nl-submit:hover:before {
+	background: #58a199;
+}
+
+/* overlay becomes visible when a field is opened */
+.nl-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	z-index: 9999;
+	visibility: hidden;
+	-webkit-transition: visibility 0s 0.3s, opacity 0.3s;
+	-moz-transition: visibility 0s 0.3s, opacity 0.3s;
+	transition: visibility 0s 0.3s, opacity 0.3s;
+}
+
+.nl-field.nl-field-open ~ .nl-overlay {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>solcon-selector</id>
+        <internal>false</internal>
+        <link/>
+        <name>SolCon Selector</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	
+	getAllChoices();
+	getSolutions();
+	
+	if (input)
+		if (input.action == "getSolutions")
+			getSolutions();
+	
+})();
+
+
+function getSolutions(){
+	
+	data.solutions = [];
+	var gr_kb_knowledge = new GlideRecord('kb_knowledge');
+	gr_kb_knowledge.addQuery("kb_knowledge_base","346489f34f071b009881c5c18110c792");
+	if(input){
+		if (input.category)
+			gr_kb_knowledge.addQuery("kb_category",input.category);
+		if (input.product)
+			gr_kb_knowledge.addQuery("x_snc_sc_arnoud_product",input.product);
+		if (input.industry)
+			gr_kb_knowledge.addQuery("x_snc_sc_arnoud_industry",input.industry);
+	}
+	gr_kb_knowledge.orderByDesc('number');
+	gr_kb_knowledge.query();
+	
+	while (gr_kb_knowledge.next()) {
+		var item = {};
+			item.number = gr_kb_knowledge.getValue('number');
+			item.sys_id = gr_kb_knowledge.getValue('sys_id');
+			item.categoryDisp = gr_kb_knowledge.getDisplayValue('kb_category');
+			item.category = gr_kb_knowledge.getValue('kb_category');
+			item.categoryValue = gr_kb_knowledge.getDisplayValue('kb_category')
+								.toLowerCase().replace(/ /g, '_').replace(/\W/g, '');
+			item.productDisp = gr_kb_knowledge.getDisplayValue('x_snc_sc_arnoud_product');
+			item.product = gr_kb_knowledge.getValue('x_snc_sc_arnoud_product');
+			item.industryDisp = gr_kb_knowledge.getDisplayValue('x_snc_sc_arnoud_industry');
+			item.industry = gr_kb_knowledge.getDisplayValue('x_snc_sc_arnoud_industry');
+			item.short_description = gr_kb_knowledge.getValue('short_description');
+			data.solutions.push(item);
+			
+		}
+		data.solutionsCount = data.solutions.length;
+		if (data.solutions.length == 0){
+			var item = {};
+				item.category = "No matches";
+				data.solutions.push(item);
+			}
+			
+		}
+		
+		function getAllChoices(){
+			if (typeof input ==  'undefined') input = {};
+				
+				if (!input.category)
+					data.categories = getChoices("kb_category","Any solution");
+				if (!input.product)
+					data.products = getChoices("x_snc_sc_arnoud_product","Any product");
+				if (!input.industry)
+					data.industries = getChoices("x_snc_sc_arnoud_industry","Any industry");
+			}
+			
+			//helper to get array of arrays containg choices value labels
+			function getChoices(element, label){
+				var choices = [];
+				choices.push(["",label])
+				
+				var ga = new GlideAggregate('kb_knowledge');
+				ga.addQuery("kb_knowledge_base","346489f34f071b009881c5c18110c792");
+				if(input){
+					if (input.category)
+						ga.addQuery("kb_category",input.category);
+					if (input.product)
+						ga.addQuery("x_snc_sc_arnoud_product",input.product);
+					if (input.industry)
+						ga.addQuery("x_snc_sc_arnoud_industry",input.industry);
+				}
+				ga.addAggregate("COUNT",element);
+				ga.orderBy('label');
+				ga.query();
+				while (ga.next()) {
+					choices.push([
+					ga.getValue(element),
+					ga.getDisplayValue(element)
+					]);
+				}
+				
+				return choices;
+			}]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>Arnoud.Kooi</sys_created_by>
+        <sys_created_on>2018-07-08 19:09:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a2fa5cbb4f831b009881c5c18110c77e</sys_id>
+        <sys_mod_count>231</sys_mod_count>
+        <sys_name>SolCon Selector</sys_name>
+        <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+        <sys_update_name>sp_widget_a2fa5cbb4f831b009881c5c18110c77e</sys_update_name>
+        <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+        <sys_updated_on>2018-07-10 20:40:59</sys_updated_on>
+        <template><![CDATA[<div class="main">
+  <div class="intro">
+    Welcome,
+    <span class="red">{{user.first_name}}</span>! Which part of the world of work, will you make better today?
+  </div>
+  <form id="nl-form" class="nl-form">
+    I need a
+    <select ng-model="c.data.category" ng-change="c.selectChange('category')">
+      <option ng-repeat="category in c.data.categories" ng-value="category[0]">{{category[1]}}</option>
+    </select>
+    for
+    <select ng-model="c.data.industry" ng-change="c.selectChange('industry')">
+      <option ng-repeat="industry in c.data.industries" ng-value="industry[0]">{{industry[1]}}</option>
+    </select>
+    and
+    <select ng-model="c.data.product" ng-change="c.selectChange('product')">
+      <option ng-repeat="product in c.data.products" ng-value="product[0]">{{product[1]}}</option>
+    </select>
+    <div class="nl-submit-wrap">
+      <button class="nl-submit" ng-click="c.getSolutions()">Find it!</button>
+      <span class="solution-header">Found: {{c.data.solutionsCount || 0}}</span>
+    </div>
+    <div class="nl-overlay"></div>
+  </form>
+
+
+  <div class="grid-container">
+    <div ng-repeat="solution in c.data.solutions" class="grid-item">
+      <div class='solution-header'>
+          <a href="#/{{solution.category}}/{{solution.category}}">{{solution.categoryDisp}}</a> 
+        | <a href="#/{{solution.categoryValue}}/industries/{{solution.industry}}">{{solution.industryDisp}}</a> 
+        | <a href="#/{{solution.categoryValue}}/products/{{solution.product}}">{{solution.productDisp}}</a> 
+      </div>
+      <div class='solution-body'>
+        <a href="/sp?id=kb_article&sys_id={{solution.sys_id}}">{{solution.number}}</a>
+        <br /> {{solution.short_description}}
+
+      </div>
+
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

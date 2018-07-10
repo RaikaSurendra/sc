@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description>Rn once after install to generate data and KB </description>
+        <flush_cache>false</flush_cache>
+        <name>Install</name>
+        <run_once>true</run_once>
+        <script><![CDATA[var kbSolutions = "346489f34f071b009881c5c18110c792";
+
+//create new knowledge base with sysid
+var gr_kb = new GlideRecord('kb_knowledge_base');
+    gr_kb.setValue('owner',gs.getUserID());
+    gr_kb.setValue('retire_workflow','3d18ef12c30031000096dfdc64d3aeb6');
+    gr_kb.setValue('workflow','fbe441019f112100d8f8700c267fcf1a');
+    gr_kb.setValue('enable_socialqa',true);
+    gr_kb.setValue('active',true);
+    gr_kb.setValue('title','Solution Library');
+    gr_kb.setValue('table','kb_knowledge');
+    gr_kb.setNewGuidValue(kbSolutions);
+    gr_kb.insert();
+
+var gr_cat = new GlideRecord('kb_category');
+    gr_cat.initialize();
+    gr_cat.setValue('parent_id',kbSolutions);
+    gr_cat.setValue('parent_table','kb_knowledge_base');
+    gr_cat.setValue('active',true);
+    gr_cat.setValue('label','Solution');
+    gr_cat.setValue('value','solution');
+    gr_cat.setNewGuidValue('5a3ed23b4fc71b009881c5c18110c7bf');
+    gr_cat.insert();
+    gr_cat.setValue('label','Solution win');
+    gr_cat.setValue('value','solution_win');
+    gr_cat.setNewGuidValue('884e923b4fc71b009881c5c18110c797');
+    gr_cat.insert();
+
+//given merged json, soltions and soltion wins
+var solAndWins = [{
+  
+  "name": "Solution Wins 1",
+  "industry": "Finance",
+  "product": "IT Cost Management"
+  },
+  {
+  
+  "name": "Solution Wins 2",
+  "industry": "Finance",
+  "product": "Facilities Service Management"
+  },
+  {
+  
+  "name": "Solution Wins 3",
+  "industry": "Education",
+  "product": "Facilities Service Management"
+  },
+  {
+  
+  "name": "Solution Wins 4",
+  "industry": "Media",
+  "product": "HR Service Automation"
+  },
+  {
+  
+  "name": "Solution Wins 5",
+  "industry": "Federal",
+  "product": "Facilities Service Management"
+  },
+  {
+  
+  "name": "Solution Wins 6",
+  "industry": "Federal",
+  "product": "IT Governance, Risk, and Compliance"
+  },
+  {
+  
+  "name": "Solution Wins 7",
+  "industry": "Media",
+  "product": "Knowledge Management"
+  },
+  {
+  
+  "name": "Solution Wins 8",
+  "industry": "Media",
+  "product": "IT Governance, Risk, and Compliance"
+  },
+  {
+  
+  "name": "Solution Wins 9",
+  "industry": "Technology",
+  "product": "Work Management"
+  },
+  {
+  
+  "name": "Solution Wins 10",
+  "industry": "Technology",
+  "product": "Asset Management"
+  },
+ {
+  
+  "name": "Solution 1",
+  "industry": "Finance",
+  "product": "ITOM"
+  },
+  {
+  
+  "name": "Solution 2",
+  "industry": "Finance",
+  "product": "ITSM"
+  },
+  {
+  
+  "name": "Solution 3",
+  "industry": "Education",
+  "product": "ITSM"
+  },
+  {
+  
+  "name": "Solution 4",
+  "industry": "Media",
+  "product": "HR Service Automation"
+  },
+  {
+  
+  "name": "Solution 5",
+  "industry": "Federal",
+  "product": "ITSM"
+  },
+  {
+  
+  "name": "Solution 6",
+  "industry": "Federal",
+  "product": "ITBM"
+  },
+  {
+  
+  "name": "Solution 7",
+  "industry": "Retail",
+  "product": "Knowledge Management"
+  },
+  {
+  
+  "name": "Solution 8",
+  "industry": "Retail",
+  "product": "SIAM"
+  },
+  {
+  
+  "name": "Solution 9",
+  "industry": "Technology",
+  "product": "Work Management"
+  },
+  {
+  
+  "name": "Solution 10",
+  "industry": "Services",
+  "product": "Asset Management"
+  }
+];
+    
+    
+function createKnowledgeChoice(element, label, value){
+  var gr_sys_choice = new GlideRecord('sys_choice');
+  gr_sys_choice.addEncodedQuery("name=kb_knowledge^language=en^element=x_snc_sc_arnoud_" 
+                                + element + "^value=" + value);
+  gr_sys_choice.query();
+  if (gr_sys_choice.next()) return 0; //allready exists
+  gr_sys_choice.initialize();
+  gr_sys_choice.setValue('name','kb_knowledge');
+  gr_sys_choice.setValue('language','en');
+  gr_sys_choice.setValue('element',"x_snc_sc_arnoud_" + element);
+  gr_sys_choice.setValue('value',value);
+  gr_sys_choice.setValue('label',label);
+  gr_sys_choice.insert();
+  return 1;
+}  
+ 
+function createChoices(arr,element){
+  var tmp = [];
+  var cnt = 0;
+  for (var i=0;i< arr.length;i++){
+    tmp.push(arr[i][element]);
+  }
+  tmp = new global.ArrayUtil().unique(tmp).sort();
+  
+  for (i=0;i< tmp.length;i++){
+    cnt += createKnowledgeChoice(
+      element, 
+      tmp[i],
+      tmp[i].toLowerCase().replace(/ /g, '_').replace(/\W/g, '')
+    );
+  }
+  return ("Choices created: " + cnt);
+}
+
+//createChoices(solAndWins,"product");
+//createChoices(solAndWins,"industry");
+
+function createKnowledge(){
+  
+  for (var i=0;i< solAndWins.length;i++){
+    
+    var category = "5a3ed23b4fc71b009881c5c18110c7bf"; //solution
+    if (solAndWins[i].name.indexOf("Wins") > -1)
+      category = "884e923b4fc71b009881c5c18110c797"; //solution win
+    
+    var gr_kb_knowledge = new GlideRecord('kb_knowledge');
+    gr_kb_knowledge.initialize();
+    gr_kb_knowledge.setValue('short_description','Dummy content');
+    gr_kb_knowledge.setValue('article_type','text');
+    gr_kb_knowledge.setValue('author', gs.getUserID());
+    gr_kb_knowledge.setValue('x_snc_sc_arnoud_product',
+         solAndWins[i].product.toLowerCase().replace(/ /g, '_').replace(/\W/g, ''));
+    gr_kb_knowledge.setValue('x_snc_sc_arnoud_industry',
+         solAndWins[i].industry.toLowerCase().replace(/ /g, '_').replace(/\W/g, ''));
+    gr_kb_knowledge.setValue('workflow_state','published');
+    gr_kb_knowledge.setValue('kb_knowledge_base',kbSolutions);
+    gr_kb_knowledge.setValue('kb_category',category);
+
+    gr_kb_knowledge.insert();
+  }
+
+}
+createKnowledge();
+
+
+
+
+
+
+
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>Arnoud.Kooi</sys_created_by>
+        <sys_created_on>2018-07-10 20:53:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>71c583904fdb5b009881c5c18110c781</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Install</sys_name>
+        <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+        <sys_update_name>sys_script_fix_71c583904fdb5b009881c5c18110c781</sys_update_name>
+        <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+        <sys_updated_on>2018-07-10 21:16:47</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

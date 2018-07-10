@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="4e0a45f74f071b009881c5c18110c702" sys_domain="global" table="kb_knowledge" version="3" view="solution">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>cd2ed23b4fc71b009881c5c18110c78d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kb_knowledge_base</element>
+            <position>1</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>412ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kb_category</element>
+            <position>2</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c12ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>published</element>
+            <position>3</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>452ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>valid_to</element>
+            <position>4</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c52ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>image</element>
+            <position>5</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>492ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>author</element>
+            <position>6</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c92ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>4d2ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>article_type</element>
+            <position>8</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>cd2ed23b4fc71b009881c5c18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>workflow_state</element>
+            <position>9</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>412ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_snc_sc_arnoud_product</element>
+            <position>10</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c12ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_snc_sc_arnoud_industry</element>
+            <position>11</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>452ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>source</element>
+            <position>12</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c52ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>direct</element>
+            <position>13</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>492ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>display_attachments</element>
+            <position>14</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c92ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>15</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>4d2ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>16</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>cd2ed23b4fc71b009881c5c18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>text</element>
+            <position>17</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>412ed23b4fc71b009881c5c18110c790</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wiki</element>
+            <position>18</position>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-09 04:41:30</sys_created_on>
+            <sys_id>c12ed23b4fc71b009881c5c18110c790</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="kb_knowledge" sys_domain="global" view="ce0a01f74f071b009881c5c18110c79c">4e0a45f74f071b009881c5c18110c702</sys_ui_section>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-09 04:41:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>kb_knowledge</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Arnoud.Kooi</sys_created_by>
+            <sys_created_on>2018-07-08 22:34:02</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4e0a45f74f071b009881c5c18110c702</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>kb_knowledge</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+            <sys_update_name>sys_ui_section_4e0a45f74f071b009881c5c18110c702</sys_update_name>
+            <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+            <sys_updated_on>2018-07-08 22:34:02</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Solution" name="solution">ce0a01f74f071b009881c5c18110c79c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

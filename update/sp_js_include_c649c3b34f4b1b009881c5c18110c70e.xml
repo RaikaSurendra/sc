@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_js_include">
+    <sp_js_include action="INSERT_OR_UPDATE">
+        <display_name>nlform.js</display_name>
+        <source>local</source>
+        <sys_class_name>sp_js_include</sys_class_name>
+        <sys_created_by>Arnoud.Kooi</sys_created_by>
+        <sys_created_on>2018-07-09 07:50:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c649c3b34f4b1b009881c5c18110c70e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>nlform.js</sys_name>
+        <sys_package display_value="Solution Consulting" source="x_snc_sc_arnoud">dac88fdf4f87d7009881c5c18110c7c7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Solution Consulting">dac88fdf4f87d7009881c5c18110c7c7</sys_scope>
+        <sys_ui_script display_value="x_snc_sc_arnoud.nlform.js">c00ac7b34f4b1b009881c5c18110c777</sys_ui_script>
+        <sys_update_name>sp_js_include_c649c3b34f4b1b009881c5c18110c70e</sys_update_name>
+        <sys_updated_by>Arnoud.Kooi</sys_updated_by>
+        <sys_updated_on>2018-07-09 07:54:21</sys_updated_on>
+        <url/>
+    </sp_js_include>
+</record_update>
